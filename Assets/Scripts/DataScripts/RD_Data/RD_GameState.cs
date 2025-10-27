@@ -1,20 +1,25 @@
+using Assets.Scripts.Enums;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameStateSO", menuName = "ScriptableObjects/GameStateSO", order = 1)]
-public class RD_GameState : ScriptableObject
+namespace Assets.Scripts.DataScripts.RD_Data
 {
-    [Header("Current Game State")]
-    public GameStateEnum CurrentState = GameStateEnum.MainMenu;
-
-    // Örnek metodlar
-    public void SetState(GameStateEnum newState)
+    [CreateAssetMenu(fileName = "GameStateSO", menuName = "ScriptableObjects/GameStateSO", order = 1)]
+    public class RD_GameState : ScriptableObject
     {
-        CurrentState = newState;
-        Debug.Log("Game State changed to: " + CurrentState);
-    }
+        [Header("Current Game State")]
+        public GameStateEnum CurrentState = GameStateEnum.MainMenu;
 
-    public bool IsState(GameStateEnum stateToCheck)
-    {
-        return CurrentState == stateToCheck;
+        // Örnek metodlar
+        public void SetState(GameStateEnum newState)
+        {
+            CurrentState = newState;
+            Debug.Log("Game State changed to: " + CurrentState);
+        }
+
+        public bool IsState(GameStateEnum stateToCheck)
+        {
+            return CurrentState == stateToCheck;
+        }
     }
 }
+

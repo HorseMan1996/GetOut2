@@ -1,7 +1,10 @@
-public enum GameStateEnum
+namespace Assets.Scripts.Enums
 {
-    MainMenu,
-    Playing,
-    Paused,
-    GameOver
+    public enum GameStateEnum
+    {
+        MainMenu,
+        Playing,
+        Paused,
+        GameOver
+    }
 }
