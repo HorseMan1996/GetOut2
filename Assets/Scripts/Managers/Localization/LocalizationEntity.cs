@@ -1,4 +1,3 @@
-using Assets.Scripts.Managers.Localization;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +5,9 @@ public class LocalizationEntity : MonoBehaviour
 {
     [SerializeField] TMP_Text _text;
     [SerializeField] private TermKey _termKey;
+
+    public TermKey TermKey => _termKey;
+
     void OnValidate()
     {
         if (_text == null)

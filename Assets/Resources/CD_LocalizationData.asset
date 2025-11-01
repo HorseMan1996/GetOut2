@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded11d4405b6ce44c80174f23a90ea54, type: 3}
+  m_Name: CD_LocalizationData
+  m_EditorClassIdentifier: 
+  LocalizationDictionary:
+    keys: 0200000001000000
+    values:
+    - keys: 0000000001000000
+      values:
+      - Settings
+      - Ayarlar
+    - keys: 0100000000000000
+      values:
+      - Devam
+      - Settings
+  _languagesEnum: 0
+  _termKey: 1
+  _values:
+    keys: 
+    values: []
+  _value: Settings
