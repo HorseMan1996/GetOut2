@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CD_LocalizationData
   m_EditorClassIdentifier: 
   LocalizationDictionary:
-    keys: 0200000001000000
+    keys: 02000000010000000300000004000000
     values:
     - keys: 0000000001000000
       values:
@@ -23,9 +23,17 @@ MonoBehaviour:
       values:
       - Devam
       - Settings
-  _languagesEnum: 0
-  _termKey: 1
+    - keys: 0000000001000000
+      values:
+      - Apply
+      - Onayla
+    - keys: 0000000001000000
+      values:
+      - Full Screen
+      - Tam Ekran
+  _languagesEnum: 1
+  _termKey: 4
   _values:
     keys: 
     values: []
-  _value: Settings
+  _value: Tam Ekran

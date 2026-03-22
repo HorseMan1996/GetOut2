@@ -12,7 +12,6 @@ public class CD_LocalizationData : ScriptableObject
 
     [SerializeField] private LanguagesEnum _languagesEnum;
     [SerializeField] private TermKey _termKey;
-    [SerializeField] private SerializableDictionary<LanguagesEnum, string> _values;
     [SerializeField] private string _value;
 
     [ContextMenu("AddNewEntry")]
@@ -34,13 +33,10 @@ public class CD_LocalizationData : ScriptableObject
         else
         {
             Debug.Log("Added new TermKey with LanguageEnum entry.");
-            _values.Dictionary.Add(_languagesEnum, _value);
             var newValues = new SerializableDictionary<LanguagesEnum, string>();
             newValues.Dictionary.Add(_languagesEnum, _value);
             LocalizationDictionary.Dictionary.Add(_termKey, newValues);
         }
-
-        _values.Dictionary.Clear();
     }
 
 #endif

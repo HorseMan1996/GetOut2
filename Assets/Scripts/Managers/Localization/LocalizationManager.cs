@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class LocalizationManager : MonoBehaviour
@@ -34,6 +35,7 @@ public class LocalizationManager : MonoBehaviour
 
     private void GetAllLocalizationEntities()
     {
+        _localizationEntities.Clear();
         _localizationEntities.AddRange(FindObjectsOfType<LocalizationEntity>());
     }
 
@@ -88,4 +90,32 @@ public class LocalizationManager : MonoBehaviour
             }
         }
     }
+
+    #region Test Methods
+
+
+    public void TestGetAllLocalizationEntities()
+    {
+        GetAllLocalizationEntities();
+    }
+
+    #endregion
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(LocalizationManager))]
+public class MyScriptEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        LocalizationManager script = (LocalizationManager)target;
+
+        if (GUILayout.Button("Function Run"))
+        {
+            script.TestGetAllLocalizationEntities();
+        }
+    }
+}
+#endif
